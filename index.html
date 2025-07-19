@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio Evanno</title>
+    <title>Portfolio Evanno</title>
 
+    <!-- CSS External Link -->
+    <link rel="stylesheet" href="css\Style.css">
+
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
@@ -13,7 +17,7 @@
     <!-- Header Content with Tailwind CSS -->
     <header class="flex justify-between items-center p-[8px] bg-gray-200">
         <!-- Logo Icon -->
-        <div class="h-16 w-16 bg-[url(https://picsum.photos/200)] rounded-full bg-center bg-cover"></div>
+        <div class="h-16 w-16 bg-[url(https://smkpgri2depok.sch.id/wp-content/uploads/2022/09/cropped-9857245logosmkpgri2depok-1.jpg)] rounded-full bg-center bg-cover"></div>
 
         <nav class="flex">
             <a class="border rounded-[4px] py-[4px] px-[8px] text-decoration-none" href="#home-page">Home</a>
@@ -34,8 +38,7 @@
             </header>
 
             <div>
-                <p class="text-center">This is the home page content. Here you can find various information about our
-                    services.</p>
+                <p class="text-center">ini adalah bagian konten utama, disini kalian akan diperlihatkan sebuah profile dari Evanno Pratama Putra</p>
 
                 <div class="banner-img"></div>
             </div>
@@ -45,13 +48,13 @@
 
         <!-- Our Profile Content -->
         <section id="our-profile">
-            <header>
+            <header class="flex flex-col items-center">
+                <div class="h-50 w-50 bg-[url(https://yt3.ggpht.com/RF8NSLcrLEkwGGuNpy2vrW636BxLE9nCQZQT5SO8FIzQdH89taVDkjlxWYgkelJYhVdTHsDe=s600-c-k-c0x00ffffff-no-rj-rp-mo)] rounded-full bg-center bg-cover"></div>
                 <h2 class="text-xl font-semibold text-center my-4">Our Profile</h2>
             </header>
 
             <article>
-                <p class="text-center">We are a team of dedicated professionals committed to providing the best services
-                    possible. Our profile includes our mission, vision, and values.</p>
+                <p class="text-center; justify-between">Perkenalkan nama saya Evanno Pratama Putra, lulusan dari sekolah SMK PGRI 2 DEPOK dengan jurusan DKV. Saat menempuh pendidikan semasa sekolah sudah mempelajari banyak hal, salah satu nya yaitu menggambar menggunakan Adobe Illustrator dan Photoshop. selain menggambar pernah juga membuat sebuah animasi pendek menggunakan Adobe Animate. pernah PKL selama 3 bulan di perusahaan Teman Print. selama Pkl sudah mendapatkan ilmu yang bermanfaat, salah satu contoh nya bisa membuat desain poster, baju, dan mug.</p>
             </article>
         </section>
 
@@ -59,32 +62,58 @@
 
         <!-- Message Us Content -->
         <section id="message-us">
-            <header>
-                <h2 class="text-xl font-semibold text-center my-4">Message Us</h2>
-            </header>
-
-            <form>
-
-                <div class="flex flex-col items-center">
-                    <label for="name-input" class="mb-2">Name:</label>
-                    <input type="text" id="name-input" name="name" class="border rounded p-2 mb-4 w-1/2">
-
-                    <button onclick="validateForm();" type="button"
-                        class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">Send
-                        Message</button>
-                </div>
+        
+            <header class="flex-row"></header>
+        <div class="container">
+        <div class="flex-row">
+            <div class="form-section">
+                <h2>Message Us</h2>
+                <form id="messageForm">
+                    <div class="form-group">
+                        <label for="nama">Nama :</label>
+                        <input type="text" id="nama" name="nama" placeholder="Nama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tgl">Tanggal Lahir :</label>
+                        <input type="date" id="tgl" name="tgl" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Jenis Kelamin :</label>
+                        <input class="gender" type="radio" id="laki" name="gender" value="Laki-Laki" required>
+                        <label for="laki" style="width:auto;">Laki-Laki</label>
+                        <input class="gender" type="radio" id="perempuan" name="gender" value="Perempuan">
+                        <label for="perempuan" style="width:auto;">Perempuan</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Pesan :</label>
+                        <textarea id="pesan" name="pesan" placeholder="Pesan" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label></label>
+                        <button class="submit-btn" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="display-section" id="displayBox">
+                <b>Current time :</b> <span id="currentTime"></span>
+                <br><br>
+                <b>Nama :</b> <span id="dispNama"></span><br>
+                <b>Tanggal Lahir :</b> <span id="dispTgl"></span><br>
+                <b>Jenis Kelamin :</b> <span id="dispGender"></span><br>
+                <b>Pesan :</b> <span id="dispPesan"></span>
+            </div>
+        </div>
+    </div>
+                    
             </form>
 
-            <div id="message-output" class="text-center mt-4">Result:</div>
         </section>
     </main>
 
-    <!-- Footer Content -->
     <footer>
         <p class="text-center text-gray-600 py-4">© 2025 Evanno. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript External Link -->
     <script src="js/script.js"></script>
 </body>
 

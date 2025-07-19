@@ -8,13 +8,18 @@ function showWelcomePopup() {
     }
 }
 
-function validateForm() {
-    const nameInput = document.getElementById('name-input');
-
-    if (nameInput.value === '') {
-        alert('Please enter your name.');
-    } else {
-        document.getElementById('message-output').innerHTML = `Thank you, ${nameInput.value}, for your message!`;
-        nameInput.value = ''; // Clear the input field after submission
-    }
+function updateTime() {
+    const now = new Date();
+    document.getElementById('currentTime').textContent = now.toString();
 }
+setInterval(updateTime, 1000);
+updateTime();
+
+document.getElementById('messageForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('dispNama').textContent = document.getElementById('nama').value;
+    document.getElementById('dispTgl').textContent = document.getElementById('tgl').value;
+    const gender = document.querySelector('input[name="gender"]:checked');
+    document.getElementById('dispGender').textContent = gender ? gender.value : '';
+    document.getElementById('dispPesan').textContent = document.getElementById('pesan').value;
+});
