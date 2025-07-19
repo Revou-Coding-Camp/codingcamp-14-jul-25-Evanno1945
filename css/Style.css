@@ -90,3 +90,66 @@ section {
 .display-section b {
     font-weight: bold;
 }
+
+/* Responsive for tablets (max-width: 900px) */
+@media (max-width: 900px) {
+    .container {
+        width: 98%;
+        padding: 20px 0;
+    }
+    .flex-row {
+        flex-direction: column;
+        gap: 24px;
+        align-items: stretch;
+    }
+    .form-section,
+    .display-section {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+}
+
+/* Responsive for phones (max-width: 600px) */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px 0;
+        border-radius: 0;
+    }
+    .form-section,
+    .display-section {
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 15px;
+    }
+    .form-group label {
+        width: 90px;
+        font-size: 13px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group textarea {
+        width: 100%;
+        font-size: 13px;
+    }
+    .submit-btn {
+        width: 100%;
+        font-size: 15px;
+    }
+    .banner-img {
+        height: 200px;
+    }
+}
+
+/* Optional: Make header and nav responsive */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px 0;
+    }
+    nav.flex {
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+    }
+}
